@@ -1,0 +1,41 @@
+[package]
+name = "nuclei-attributes"
+version = "0.1.0"
+authors = ["Mahmut Bulut <vertexclique@gmail.com>"]
+edition = "2021"
+description = "Attributes for Nuclei"
+keywords = ["io", "async", "uring", "iouring", "proactor"]
+categories = ["concurrency", "asynchronous"]
+homepage = "https://github.com/vertexclique/nuclei"
+repository = "https://github.com/vertexclique/nuclei"
+documentation = "https://docs.rs/nuclei"
+license = "Apache-2.0/MIT"
+readme = "README.md"
+exclude = [
+    "data/*",
+    ".github/*",
+    "examples/*",
+    "graphstore/*",
+    "tests/*",
+    "img/*",
+    "ci/*",
+    "benches/*",
+    "doc/*",
+    "docs/*",
+    "*.png",
+    "*.dot",
+    "*.yml",
+    "*.toml",
+    "*.md"
+]
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+proc-macro = true
+
+[dependencies]
+syn = { version = "1.0", features = ["full"] }
+quote = "1.0"
+
+[dev-dependencies]
+nuclei = "0"
